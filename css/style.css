@@ -1,0 +1,96 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; transition: all 0.2s ease-in;}
+body{ text-align: center; font-family: 'Lemonada'; color: rgb(100, 100, 100);}
+.bg{ width: 100%; height: 100%; position: fixed; z-index: -1 }
+.bg-img{ width: 150%; transform: translate(-20%, -30%); }
+.title{ font-size: 50px; }
+.sub-title{font-size: 25px;}
+.select-option{ margin: 20px 0; display: flex; justify-content: space-around; align-items: center; }
+.option{
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(79, 79, 110), 0 0 5px rgb(49, 49, 83), 0 0 10px rgb(63, 63, 189);
+    overflow: hidden;
+}
+.option:hover{
+    .option-img{
+        width: 110%;
+        height: 110%;
+        transform: translate(-5%, -5%);
+        box-shadow: -5px -5px 10px rgb(20, 20, 30), 0 0 5px rgb(10, 10, 20), 5px 5px 10px rgb(30, 30, 40);
+    }
+}
+.option-img{ width: 100%; height: 100%; border-radius: 10px; }
+.pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.computer-title{
+    color: white;
+    font-size: 43px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.computer-option-img{ width: 25%; height: 50%; border-radius: 10px; }
+.winner{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.how-win{
+    width: 65%;
+    font-size: 33px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.equals{ color: yellow;}
+.player-win{ color: rgb(0, 255, 0);}
+.computer-win{ color: red;}
+.play-again{
+    width: 15%;
+    font-size: 23px;
+    font-family: 'Lemonada';
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 5px rgb(68, 68, 68);
+    cursor: pointer;
+    background-color: rgb(5, 71, 252);
+    color: white;
+}
+.play-again:hover{ width: 16%; font-size: 25px; transform: translate(2%, -2%); }
+.play-again:active{ transform: translateY(10px); box-shadow: none; }
+@media (max-width: 768px) {
+    .bg{ width: 200%; }
+    .bg-img{ width: 200%; transform: translate(-40%, -35%);}
+    .title{ font-size: 45px; }
+    .select-option{ display: grid; grid-template-columns: repeat(auto-fill, 45%); gap: 5%;}
+    .option{ width: 100%; height: 100%;}
+    .option:hover{ .option-img{ width: 105%; height: 105%; transform: translate(-2%, -2%); }}
+    .computer-title{ font-size: 38px; flex-direction: column; }
+    .computer-option-img{ width: 40%; height: 40%;}
+    .winner{ margin: 0px; flex-direction: column;}
+    .how-win{ width: 95%; font-size: 23px; justify-content: space-between; }
+    .play-again{
+        margin: 20px;
+        width: 50%;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .play-again:hover{ width: 56%; font-size: 17px; }
+}
