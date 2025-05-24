@@ -59,7 +59,7 @@ function check_winner(first_option, second_option, container) {
     voice.setAttribute("src", audio_src);
     voice.play();
     if (win_msg.includes("You Win")) {
-        const duration = 4 * 1000,
+        const duration = 3 * 1000,
         animationEnd = Date.now() + duration,
         defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
         function randomInRange(min, max) { return Math.random() * (max - min) + min;}
